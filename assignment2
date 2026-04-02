@@ -1,0 +1,46 @@
+name = input("Enter customer name: ")
+
+total = 0
+count = 0
+
+while True:
+    product = input("Enter product name (or 'done' to finish): ")
+    
+    if product == "done":
+        break
+    
+    price = float(input("Enter price: "))
+    
+    total = total + price
+    count = count + 1
+
+print("Customer :", name.upper())
+print("Items :", count)
+print("Subtotal :", total, "KZT")
+
+
+if total < 3000:
+    dicount = 0
+    label= "No discount"
+elif total < 7000:
+    discount = total * 0.05
+    label = "5% discount"
+else:
+    discount = total * 0.15
+    label = "15% discount"
+final_total = total - discount
+print("-----------------------------")
+print("Discount tier :", label)
+print("Discount :", discount, "KZT")
+print("Total :", final_total, "KZT")
+
+
+
+print("Name uppercase :", name.upper())
+print("Name lowercase :", name.lower())
+print("Name length :", len(name))
+
+if len(name) > 5:
+    print("Long name")
+else:
+    print("Short name")
